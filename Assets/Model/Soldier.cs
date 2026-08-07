@@ -1,8 +1,9 @@
-﻿using UnityEngine;
+﻿using Interface;
+using UnityEngine;
 
 namespace Model
 {
-    public class Soldier : Enemy
+    public class Soldier : Enemy, ITransform
     {
         public Sprite idleSprite;
         public Sprite attackSprite;
@@ -36,6 +37,11 @@ namespace Model
             base.TakeDamage(damage);
             _spriteRenderer.sprite = defenceSprite;
         }
-        
+
+        public void Transform()
+        {
+            Debug.Log("SoldierTransform");
+           // transform.localScale = new Vector3(3, 3, 3);
+        }
     }
 }

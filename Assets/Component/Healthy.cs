@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 
-public class Healthy : MonoBehaviour
+public class Healthy : MonoBehaviour, IDamageable
 {
     [Header("Thông số máu")]
     public int maxHealth = 100;
@@ -12,16 +12,7 @@ public class Healthy : MonoBehaviour
     {
         currentHealth = maxHealth;
     }
-
-   public bool TakeDamage(int damage)
-    {
-        if (isDead)
-        {
-            return true;
-        }
-        currentHealth -= damage;
-        return isDead;
-    }
+    
 
     public void Heal(int amount)
     {
@@ -32,4 +23,13 @@ public class Healthy : MonoBehaviour
         currentHealth += amount;
     }
 
+    public bool TakeDamage(int damage)
+    {
+        if (isDead)
+        {
+            return true;
+        }
+        currentHealth -= damage;
+        return isDead;
+    }
 }

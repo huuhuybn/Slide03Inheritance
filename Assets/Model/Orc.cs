@@ -1,4 +1,5 @@
 ﻿using Component;
+using Interface;
 using UnityEngine;
 
 namespace Model
@@ -6,9 +7,8 @@ namespace Model
     // ép buộc dùng kèm Healthy Component
     [RequireComponent(typeof(Healthy))]
     [RequireComponent(typeof(EnemyVisual))]
-    public class Orc : Enemy
+    public class Orc : Enemy, IAttackable, ITransform, IDamageable
     {
-      
         Healthy _healthy;
         private EnemyVisual _visual;
         void Awake()
@@ -17,7 +17,6 @@ namespace Model
             _healthy = GetComponent<Healthy>();
             _spriteRenderer = GetComponent<SpriteRenderer>();
             FlipSprite(-1);
-            _visual.ShowIdle();
         }
 
         void Update()
@@ -30,11 +29,21 @@ namespace Model
             base.Attack();
             _visual.ShowAttack();
         }
-
-        protected override void TakeDamage(int damage)
+        
+        public void Attack(int damage)
         {
-            base.TakeDamage(damage);
-            _healthy.TakeDamage(damage);
+          Debug.Log(damage);
+        }
+
+        public void Transform()
+        {
+          Debug.Log("Transform");
+          transform.localScale *= 2;
+        }
+
+        public bool TakeDamage(int damage)
+        {
+            return _healthy.TakeDamage(damage);
         }
     }
 }
