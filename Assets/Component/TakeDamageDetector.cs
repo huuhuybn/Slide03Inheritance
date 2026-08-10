@@ -5,9 +5,7 @@ namespace Component
 {
     public class TakeDamageDetector : MonoBehaviour
     {
-
         public int dam = 20;
-        
         // Hàm xảy ra khi có va chạm lần đầu tiên ,
         // thông tin đối tượng va chạm chứa trong biến other
         private void OnCollisionEnter2D(Collision2D other)

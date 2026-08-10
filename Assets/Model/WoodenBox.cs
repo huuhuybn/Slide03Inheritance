@@ -8,6 +8,7 @@ public class WoodenBox : MonoBehaviour, IDamageable
 {
     Healthy _healthy;
     private EnemyVisual _visual;
+    
 
     private void Awake()
     {

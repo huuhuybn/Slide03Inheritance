@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 
 public class Healthy : MonoBehaviour, IDamageable
@@ -7,13 +8,13 @@ public class Healthy : MonoBehaviour, IDamageable
     public int maxHealth = 100;
     public int currentHealth;
     bool isDead => currentHealth <= 0;
-
+    
     void Start()
     {
         currentHealth = maxHealth;
+        
     }
     
-
     public void Heal(int amount)
     {
         if (isDead)
