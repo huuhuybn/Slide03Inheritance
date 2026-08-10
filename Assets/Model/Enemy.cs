@@ -12,7 +12,18 @@ public class Enemy : MonoBehaviour
     protected SpriteRenderer _spriteRenderer;
     // máu hiện tại 
     protected int currentHealth;
-    
+
+
+    private void Awake()
+    {
+        Healthy.OnPlayerDie += Congraz;
+    }
+
+    public void Congraz()
+    {
+        Debug.Log("Congraz Player Died");
+    }
+
     protected virtual void Start()
     {
         currentHealth = maxHealth;
