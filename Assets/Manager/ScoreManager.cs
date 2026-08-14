@@ -12,7 +12,6 @@ public class ScoreManager : MonoBehaviour
     public static void AddScore(int score)
     {
         OnScoreAdded?.Invoke(score);
-        
         //GameManager.Instance.GameOver();
     }
     
