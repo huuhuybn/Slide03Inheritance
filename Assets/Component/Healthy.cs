@@ -33,7 +33,6 @@ public class Healthy : MonoBehaviour, IDamageable
         }
         return isDead;
     }
- 
     
     void Start()
     {
