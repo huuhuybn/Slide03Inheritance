@@ -52,6 +52,13 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+     
+
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log("OnCollisionEnter2D");
@@ -71,7 +78,6 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Ko co pickable");
         }
-
         /*if (other.gameObject.tag.Equals("Gem"))
         {
             Destroy(other.gameObject);

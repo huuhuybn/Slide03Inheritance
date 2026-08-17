@@ -1,8 +1,20 @@
+using System;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
 {
-   // 1. Khai báo 1 Delegate , nhận vào 1 số nguyên
+    private void Awake()
+    {
+        Debug.Log("ScoreManager - Awake");
+    }
+
+    private void Start()
+    {
+        Debug.Log("ScoreManager - Start");
+    }
+
+
+    // 1. Khai báo 1 Delegate , nhận vào 1 số nguyên
    public delegate void ScoreAddedHandler(int  score);
    
    // 2. Khai báo Event sự kiện nhận điểm 

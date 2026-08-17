@@ -1,14 +1,22 @@
+using System;
 using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private void Awake()
+    {
+        Debug.Log("GameManager - Awake");
+    }
+    
     // khai báo nó ở trạng thái 1 biến tĩnh 
     public static GameManager Instance { get; set; }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
-    {   // Kiểm tra xem đã khởi tạo GameManager trước đó chưa, nếu có rồi thì hủy đi, tránh tạo thừa 
+    {   
+        Debug.Log("GameManager - Start");
+        // Kiểm tra xem đã khởi tạo GameManager trước đó chưa, nếu có rồi thì hủy đi, tránh tạo thừa 
         if (Instance != null && Instance != this)
         {
             Destroy(this.gameObject);
@@ -21,16 +29,19 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("GameOver")]
     public void GameOver()
     {
         Debug.Log("GameOver");
     }
 
+    [ContextMenu("Victory")]
     public void Victory()
     {
         Debug.Log("Victory");
     }
 
+    [ContextMenu("RestartLevel")]
     public void RestartLevel()
     {
         // nạp lại Scene hiện tại 

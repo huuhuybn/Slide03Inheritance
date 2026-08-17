@@ -9,8 +9,15 @@ public class ScoreUI : MonoBehaviour
 
     private void Awake()
     {
+        
+        Debug.Log("ScoreUI - Awake");
         scoreText = GameObject.FindGameObjectWithTag("Score").GetComponent<Text>();
         scoreText.text = "Score: " + currentScore;
+    }
+
+    private void Start()
+    {
+        Debug.Log("ScoreUI - Start");
     }
 
     private void OnEnable()
