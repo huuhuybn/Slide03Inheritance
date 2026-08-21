@@ -1,6 +1,7 @@
 using System;
 using Component.Player;
 using Interface;
+using Manager;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -49,6 +50,11 @@ public class PlayerController : MonoBehaviour
         {
             Healthy healthy = GetComponent<Healthy>();
             healthy.TakeDamage(10);
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            BulletPool.instance.GetBullet(transform.position, Quaternion.identity);
         }
     }
 
