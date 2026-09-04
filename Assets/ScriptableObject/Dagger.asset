@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d43f8a3637673d4f9e502e6c141db85, type: 3}
   m_Name: Dagger
   m_EditorClassIdentifier: Assembly-CSharp::WeaponData
-  weaponName: Axe
-  description: "R\xECu s\u1EAFt, s\u1EE9c t\u1EA5n c\xF4ng b\xECnh th\u01B0\u1EDDng,
-    ch\u1EADm "
-  icon: {fileID: -5771208244437715300, guid: 8506b077fb13f0d4ab7bb799940eab3d, type: 3}
-  prefab: {fileID: 1573094536668783219, guid: c49fc2cb5fc2cee4d9c86feb8b815571, type: 3}
-  damage: 200
+  weaponName: Dagger
+  description: "Sao g\u0103m "
+  icon: {fileID: 5492372135966877312, guid: 8506b077fb13f0d4ab7bb799940eab3d, type: 3}
+  prefab: {fileID: 7857530350850361583, guid: 53743b2332b28e741a83188aae9c207a, type: 3}
+  damage: 110
   attackRange: 1
-  attackSpeed: 1
+  attackSpeed: 1.5
