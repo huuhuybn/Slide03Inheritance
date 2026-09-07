@@ -12,7 +12,7 @@ public class FoxController : MonoBehaviour
     private float horizontalInput;
     
     public Transform groundCheck; // vi tri duoi chan nhan vat 
-    LayerMask groundLayer; // lớp gameobject coi là mặt đất - gần giống tag nhưng rộng hơn 
+    public LayerMask groundLayer; // lớp gameobject coi là mặt đất - gần giống tag nhưng rộng hơn 
     bool isGrounded; // trang thai nhan vat co cham dat khong 
     
     bool isCrouching = false;
@@ -46,10 +46,10 @@ public class FoxController : MonoBehaviour
             rb.linearVelocity = new  Vector2(rb.linearVelocity.x, jumpForce);
         }
         // Cúi xuống 
-        if (Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.DownArrow) && isGrounded)
+        if ((Input.GetKeyDown(KeyCode.C) || Input.GetKeyDown(KeyCode.DownArrow)) && isGrounded)
         {
             isCrouching = true;
-        }else if (Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.DownArrow) && isGrounded)
+        }else if ((Input.GetKeyUp(KeyCode.C) || Input.GetKeyUp(KeyCode.DownArrow)) && isGrounded)
         {
             isCrouching = false;
         }
@@ -64,7 +64,8 @@ public class FoxController : MonoBehaviour
     }
     void UpdateAnimation()
     {
-       anim.SetFloat("Speed", Mathf.Abs(horizontalInput));
+       float currentSpeed = (isCrouching || isRolling) ? 0 : Mathf.Abs(horizontalInput);
+       anim.SetFloat("Speed", currentSpeed);
        anim.SetFloat("VelocityY", rb.linearVelocity.y);
        anim.SetBool("IsGrounded", isGrounded);
        anim.SetBool("IsCrouching", isCrouching);
