@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 103c90ce6cc35bb4b87f64a5156be7a3
+guid: bbca05fc1ba3e2344a518aba8fa1adbd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3899264874753553345
-    second: chat_0
+      213: 3601288264203340663
+    second: resume_bg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 833, y: 196, z: 160, w: 156}
+  spriteBorder: {x: 279, y: 117, z: 82, w: 115}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chat_0
+      name: resume_bg_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1280
-        height: 507
+        width: 889
+        height: 246
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1c3f7d09eb8fc1630800000000000000
-      internalID: 3899264874753553345
+      spriteID: 77b8f9988985af130800000000000000
+      internalID: 3601288264203340663
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chat_0: 3899264874753553345
+      resume_bg_0: 3601288264203340663
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
